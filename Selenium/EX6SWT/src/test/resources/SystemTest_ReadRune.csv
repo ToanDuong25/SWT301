@@ -1,0 +1,60 @@
+TestID,Module,Tên Test Case,Mô tả,Precondition,Bước thực hiện,Dữ liệu đầu vào,Kết quả mong đợi,Kết quả thực tế,Trạng thái,Độ ưu tiên,Ghi chú
+TC-LG-001,Login,Trang Login load thành công,Kiểm tra trang Login hiển thị đầy đủ các trường,Trình duyệt đã mở,"1. Mở URL trang Login
+2. Kiểm tra trang đã load",URL: /ReadRune/Login,"Trang hiển thị đầy đủ: ô Email, ô Password, nút Login",,PASS,P0,
+TC-LG-002,Login,Đăng nhập thành công với thông tin hợp lệ,Kiểm tra đăng nhập với email và password đúng,Trang Login đã mở - Có tài khoản hợp lệ,"1. Nhập email hợp lệ
+2. Nhập password hợp lệ
+3. Click nút Login","Email: testuser@gmail.com
+Password: Test@12345",Chuyển hướng đến trang chính - Không còn ở trang Login,,PASS,P0,
+TC-LG-003,Login,Đăng nhập thất bại khi email trống,Kiểm tra validation khi để trống email,Trang Login đã mở,"1. Để trống ô email
+2. Nhập password bất kỳ
+3. Click nút Login","Email: (trống)
+Password: Test@12345",Hiển thị thông báo lỗi - Không đăng nhập được,,PASS,P0,
+TC-LG-004,Login,Đăng nhập thất bại khi password trống,Kiểm tra validation khi để trống password,Trang Login đã mở,"1. Nhập email hợp lệ
+2. Để trống ô password
+3. Click nút Login","Email: testuser@gmail.com
+Password: (trống)",Hiển thị thông báo lỗi - Không đăng nhập được,,PASS,P0,
+TC-LG-005,Login,Đăng nhập thất bại với email sai,Kiểm tra khi nhập email không tồn tại,Trang Login đã mở,"1. Nhập email không tồn tại
+2. Nhập password bất kỳ
+3. Click nút Login","Email: wrong_email@gmail.com
+Password: Test@12345",Hiển thị thông báo lỗi đăng nhập thất bại,,PASS,P1,
+TC-LG-006,Login,Đăng nhập thất bại với password sai,Kiểm tra khi nhập password sai,Trang Login đã mở,"1. Nhập email hợp lệ
+2. Nhập password sai
+3. Click nút Login","Email: testuser@gmail.com
+Password: WrongPassword123",Hiển thị thông báo lỗi đăng nhập thất bại,,PASS,P1,
+TC-LG-007,Login,Đăng nhập thất bại khi cả 2 trường trống,Kiểm tra khi để trống cả email và password,Trang Login đã mở,"1. Để trống cả email và password
+2. Click nút Login","Email: (trống)
+Password: (trống)",Hiển thị thông báo lỗi,,PASS,P1,
+TC-LG-008,Login,Chuyển sang trang Đăng ký,Kiểm tra link đăng ký trên trang Login,Trang Login đã mở,"1. Click link Đăng ký / Sign Up",Không có,Chuyển hướng đến trang Đăng ký (URL chứa Register/SignUp),,PASS,P2,
+TC-RG-001,Register,Trang Đăng ký load thành công,Kiểm tra trang Đăng ký hiển thị đầy đủ,Trình duyệt đã mở,"1. Mở URL trang Đăng ký
+2. Kiểm tra trang đã load",URL: /ReadRune/Register,"Trang hiển thị đầy đủ: ô Email, ô Password, nút Đăng ký",,PASS,P0,
+TC-RG-002,Register,Đăng ký thành công với thông tin hợp lệ,Kiểm tra đăng ký với thông tin đầy đủ và hợp lệ,Trang Đăng ký đã mở,"1. Nhập họ tên
+2. Nhập email mới
+3. Nhập password
+4. Nhập xác nhận password
+5. Click nút Đăng ký","Name: Test User
+Email: newuser_xxx@gmail.com
+Password: Test@12345
+Confirm: Test@12345",Đăng ký thành công - Chuyển hướng đến trang Login hoặc trang chính,,PASS,P0,
+TC-RG-003,Register,Đăng ký thất bại khi tất cả trường trống,Kiểm tra validation khi để trống tất cả,Trang Đăng ký đã mở,"1. Để trống tất cả các trường
+2. Click nút Đăng ký",Tất cả trường trống,Hiển thị thông báo lỗi - Không đăng ký được,,PASS,P0,
+TC-RG-004,Register,Đăng ký thất bại với email không hợp lệ,Kiểm tra validation email format,Trang Đăng ký đã mở,"1. Nhập tên
+2. Nhập email sai format
+3. Nhập password và confirm
+4. Click nút Đăng ký","Name: Test User
+Email: invalid-email
+Password: Test@12345",Hiển thị thông báo lỗi email không hợp lệ,,PASS,P1,
+TC-RG-005,Register,Đăng ký thất bại với password quá ngắn,Kiểm tra validation độ dài password,Trang Đăng ký đã mở,"1. Nhập tên và email hợp lệ
+2. Nhập password ngắn
+3. Click nút Đăng ký","Name: Test User
+Email: test@gmail.com
+Password: 123",Hiển thị thông báo lỗi password quá ngắn,,PASS,P1,
+TC-RG-006,Register,Đăng ký thất bại khi confirm password không khớp,Kiểm tra validation xác nhận password,Trang Đăng ký đã mở,"1. Nhập tên và email hợp lệ
+2. Nhập password
+3. Nhập confirm password khác
+4. Click nút Đăng ký","Password: Test@12345
+Confirm: WrongConfirm99",Hiển thị thông báo lỗi password không khớp,,PASS,P1,
+TC-RG-007,Register,Đăng ký thất bại khi email đã tồn tại,Kiểm tra trường hợp email trùng,Trang Đăng ký đã mở - Email đã đăng ký trước đó,"1. Nhập email đã tồn tại
+2. Nhập các trường khác hợp lệ
+3. Click nút Đăng ký","Email: testuser@gmail.com
+(email đã tồn tại)",Hiển thị thông báo lỗi email đã tồn tại,,PASS,P1,
+TC-RG-008,Register,Chuyển về trang Login,Kiểm tra link quay lại Login,Trang Đăng ký đã mở,"1. Click link Login / Đăng nhập",Không có,Chuyển hướng về trang Login (URL chứa Login),,PASS,P2,

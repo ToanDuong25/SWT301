@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<!--
+    CACH DUNG FILE NAY:
+    - Comment tag <test> nao thi test do BI BO QUA
+    - Bo comment thi test do SE CHAY
+    - Chay bang lenh: mvn test -DsuiteXmlFile=testng.xml
+-->
+
+<suite name="ReadRune - Bài Tập 6" verbose="2">
+
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <!-- MODULE LOGIN (TC-LG-001 đến TC-LG-008)                -->
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <test name="TC-LG-001 | Trang Login load thành công">
+        <classes>
+            <class name="tests.LoginTest">
+                <methods>
+                    <include name="testLoginLoad"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="TC-LG-002 | Đăng nhập thành công với thông tin hợp lệ">
+        <classes>
+            <class name="tests.LoginTest">
+                <methods>
+                    <include name="testValidLogin"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="TC-LG-003 | Đăng nhập thất bại khi email trống">
+        <classes>
+            <class name="tests.LoginTest">
+                <methods>
+                    <include name="testEmptyEmailLogin"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="TC-LG-004 | Đăng nhập thất bại khi password trống">
+        <classes>
+            <class name="tests.LoginTest">
+                <methods>
+                    <include name="testEmptyPasswordLogin"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="TC-LG-005 | Đăng nhập thất bại với email sai">
+        <classes>
+            <class name="tests.LoginTest">
+                <methods>
+                    <include name="testWrongEmailLogin"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="TC-LG-006 | Đăng nhập thất bại với password sai">
+        <classes>
+            <class name="tests.LoginTest">
+                <methods>
+                    <include name="testWrongPasswordLogin"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="TC-LG-007 | Đăng nhập thất bại khi cả 2 trường trống">
+        <classes>
+            <class name="tests.LoginTest">
+                <methods>
+                    <include name="testEmptyFieldsLogin"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="TC-LG-008 | Chuyển hướng sang trang Đăng ký">
+        <classes>
+            <class name="tests.LoginTest">
+                <methods>
+                    <include name="testNavigationToSignUp"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <!-- MODULE REGISTER (TC-RG-001 đến TC-RG-008)             -->
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <test name="TC-RG-001 | Trang Đăng ký load thành công">
+        <classes>
+            <class name="tests.RegisterTest">
+                <methods>
+                    <include name="testRegisterLoad"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="TC-RG-002 | Đăng ký thành công với thông tin hợp lệ">
+        <classes>
+            <class name="tests.RegisterTest">
+                <methods>
+                    <include name="testValidRegistration"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="TC-RG-003 | Đăng ký thất bại khi tất cả trường trống">
+        <classes>
+            <class name="tests.RegisterTest">
+                <methods>
+                    <include name="testEmptyFieldsRegistration"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="TC-RG-004 | Đăng ký thất bại với email không hợp lệ">
+        <classes>
+            <class name="tests.RegisterTest">
+                <methods>
+                    <include name="testInvalidEmailFormatRegistration"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="TC-RG-005 | Đăng ký thất bại với password quá ngắn">
+        <classes>
+            <class name="tests.RegisterTest">
+                <methods>
+                    <include name="testShortPasswordRegistration"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="TC-RG-006 | Đăng ký thất bại khi confirm password không khớp">
+        <classes>
+            <class name="tests.RegisterTest">
+                <methods>
+                    <include name="testPasswordMismatchRegistration"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="TC-RG-007 | Đăng ký thất bại khi email đã tồn tại">
+        <classes>
+            <class name="tests.RegisterTest">
+                <methods>
+                    <include name="testDuplicateEmailRegistration"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="TC-RG-008 | Chuyển hướng về trang Login">
+        <classes>
+            <class name="tests.RegisterTest">
+                <methods>
+                    <include name="testNavigationToLogin"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>

@@ -1,0 +1,5 @@
+tests\RegistrationTestV2.class
+pages\BasePage.class
+pages\RegistrationPage.class
+tests\BaseTest.class
+utils\DriverFactory.class

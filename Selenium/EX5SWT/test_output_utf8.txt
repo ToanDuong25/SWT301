@@ -1,0 +1,139 @@
+﻿[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------< Toandt.example:seleniumtest >---------------------
+[INFO] Building seleniumtest - B├ái tß║¡p 5 1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ seleniumtest ---
+[INFO] skip non existing resourceDirectory D:\EX5SWT\src\main\resources
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ seleniumtest ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ seleniumtest ---
+[INFO] skip non existing resourceDirectory D:\EX5SWT\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ seleniumtest ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- surefire:3.1.2:test (default-test) @ seleniumtest ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running tests.InspectLoginPageTest
+≡ƒöº Initializing WebDriver with Microsoft Edge...
+mvn : SLF4J(W): No SLF4J providers were found.
+At line:1 char:1
++ mvn test > test_output.txt 2>&1
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (SLF4J(W): No SLF4J 
+    providers were found.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+SLF4J(W): Defaulting to no-operation (NOP) logger implementation
+SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for 
+further details.
+ΓÜá WebDriverManager failed: io.github.bonigarcia.wdm.config.WebDriverManagerException: java.net.UnknownHostException: msedgedriver.azureedge.net
+[ERROR] Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.687 s <<< FAILURE! -- in tests.InspectLoginPageTest
+[ERROR] tests.InspectLoginPageTest.inspectLoginPage -- Time elapsed: 0.673 s <<< ERROR!
+java.lang.RuntimeException: 
+
+
+Γ¥î Kh├┤ng t├¼m thß║Ñy msedgedriver.exe!
+ΓåÆ Tß║úi tß║íi: https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/
+ΓåÆ Phi├¬n bß║ún cß║ºn: 145.x (khß╗¢p vß╗¢i Edge ─æang c├ái)
+ΓåÆ ─Éß║╖t file v├áo: D:\EX5SWT\msedgedriver.exe
+
+	at utils.DriverFactory.createEdgeDriver(DriverFactory.java:98)
+	at utils.DriverFactory.createDriver(DriverFactory.java:27)
+	at tests.InspectLoginPageTest.inspectLoginPage(InspectLoginPageTest.java:15)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+
+[INFO] Running tests.LoginTest
+≡ƒöº Initializing WebDriver with Microsoft Edge...
+ΓÜá WebDriverManager failed: io.github.bonigarcia.wdm.config.WebDriverManagerException: java.net.UnknownHostException: msedgedriver.azureedge.net
+[ERROR] Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.324 s <<< FAILURE! -- in tests.LoginTest
+[ERROR] tests.LoginTest -- Time elapsed: 0.324 s <<< ERROR!
+java.lang.RuntimeException: 
+
+
+Γ¥î Kh├┤ng t├¼m thß║Ñy msedgedriver.exe!
+ΓåÆ Tß║úi tß║íi: https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/
+ΓåÆ Phi├¬n bß║ún cß║ºn: 145.x (khß╗¢p vß╗¢i Edge ─æang c├ái)
+ΓåÆ ─Éß║╖t file v├áo: D:\EX5SWT\msedgedriver.exe
+
+	at utils.DriverFactory.createEdgeDriver(DriverFactory.java:98)
+	at utils.DriverFactory.createDriver(DriverFactory.java:27)
+	at tests.BaseTest.setUpBase(BaseTest.java:14)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+
+[INFO] Running tests.RegistrationTestV2
+≡ƒöº Initializing WebDriver with Microsoft Edge...
+ΓÜá WebDriverManager failed: io.github.bonigarcia.wdm.config.WebDriverManagerException: java.net.UnknownHostException: msedgedriver.azureedge.net
+[ERROR] Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.356 s <<< FAILURE! -- in tests.RegistrationTestV2
+[ERROR] tests.RegistrationTestV2 -- Time elapsed: 0.356 s <<< ERROR!
+java.lang.RuntimeException: 
+
+
+Γ¥î Kh├┤ng t├¼m thß║Ñy msedgedriver.exe!
+ΓåÆ Tß║úi tß║íi: https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/
+ΓåÆ Phi├¬n bß║ún cß║ºn: 145.x (khß╗¢p vß╗¢i Edge ─æang c├ái)
+ΓåÆ ─Éß║╖t file v├áo: D:\EX5SWT\msedgedriver.exe
+
+	at utils.DriverFactory.createEdgeDriver(DriverFactory.java:98)
+	at utils.DriverFactory.createDriver(DriverFactory.java:27)
+	at tests.BaseTest.setUpBase(BaseTest.java:14)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Errors: 
+[ERROR]   InspectLoginPageTest.inspectLoginPage:15 ┬╗ Runtime 
+
+Γ¥î Kh├┤ng t├¼m thß║Ñy msedgedriver.exe!
+ΓåÆ Tß║úi tß║íi: https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/
+ΓåÆ Phi├¬n bß║ún cß║ºn: 145.x (khß╗¢p vß╗¢i Edge ─æang c├ái)
+ΓåÆ ─Éß║╖t file v├áo: D:\EX5SWT\msedgedriver.exe
+
+[ERROR]   LoginTest>BaseTest.setUpBase:14 ┬╗ Runtime 
+
+Γ¥î Kh├┤ng t├¼m thß║Ñy msedgedriver.exe!
+ΓåÆ Tß║úi tß║íi: https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/
+ΓåÆ Phi├¬n bß║ún cß║ºn: 145.x (khß╗¢p vß╗¢i Edge ─æang c├ái)
+ΓåÆ ─Éß║╖t file v├áo: D:\EX5SWT\msedgedriver.exe
+
+[ERROR]   RegistrationTestV2>BaseTest.setUpBase:14 ┬╗ Runtime 
+
+Γ¥î Kh├┤ng t├¼m thß║Ñy msedgedriver.exe!
+ΓåÆ Tß║úi tß║íi: https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/
+ΓåÆ Phi├¬n bß║ún cß║ºn: 145.x (khß╗¢p vß╗¢i Edge ─æang c├ái)
+ΓåÆ ─Éß║╖t file v├áo: D:\EX5SWT\msedgedriver.exe
+
+[INFO] 
+[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  2.723 s
+[INFO] Finished at: 2026-03-11T09:06:57+07:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.1.2:test (default-test) on project seleniumtest: 
+[ERROR] 
+[ERROR] Please refer to D:\EX5SWT\target\surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

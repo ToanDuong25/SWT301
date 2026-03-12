@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: tests.RegistrationTestV2
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 13.37 s -- in tests.RegistrationTestV2
